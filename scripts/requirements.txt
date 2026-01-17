@@ -1,0 +1,17 @@
+# Image Optimization Tool - Python Dependencies
+#
+# Installation:
+#   pip install -r requirements.txt
+#
+# Optional dependencies are marked below
+
+# Required: Core image processing
+Pillow>=10.0.0
+
+# Optional: HEIC/HEIF support (Mac/iPhone photos)
+# Uncomment to enable:
+# pillow-heif>=0.13.0
+
+# Optional: Advanced EXIF manipulation
+# Uncomment to enable:
+# piexif>=1.1.3
