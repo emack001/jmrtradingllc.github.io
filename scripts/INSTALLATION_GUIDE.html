@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Optimization Tool - Installation Guide</title>
+    <style>
+        /* Print-optimized styling for PDF conversion */
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+
+        /* Typography */
+        h1 {
+            color: #2c3e50;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        h4 {
+            color: #555;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        /* Code blocks */
+        pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Boxes and alerts */
+        .info-box {
+            background: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .feature-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .security-badge {
+            background: #e74c3c;
+        }
+
+        .quality-badge {
+            background: #27ae60;
+        }
+
+        /* Print optimization */
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            pre, table {
+                page-break-inside: avoid;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Header info */
+        .doc-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .doc-info {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin: 8px 0;
+        }
+
+        .toc a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="doc-header">
+        <h1>📦 Image Optimization Tool</h1>
+        <h3>Installation & Setup Guide</h3>
+        <div class="doc-info">
+            Version 2.0 | Production-Ready with Security Enhancements<br>
+            Updated: January 2026
+        </div>
+    </div>
+
+    <div class="no-print info-box">
+        <strong>💡 Converting to PDF:</strong> Use your browser's Print function (Ctrl+P / Cmd+P) and select "Save as PDF" as the destination.
+    </div>
+
+    <div class="toc">
+        <h2>📋 Table of Contents</h2>
+        <ul>
+            <li><a href="#overview">1. Overview</a></li>
+            <li><a href="#requirements">2. System Requirements</a></li>
+            <li><a href="#installation">3. Installation Steps</a></li>
+            <li><a href="#verification">4. Installation Verification</a></li>
+            <li><a href="#quick-start">5. Quick Start Guide</a></li>
+            <li><a href="#usage-examples">6. Usage Examples</a></li>
+            <li><a href="#troubleshooting">7. Troubleshooting</a></li>
+            <li><a href="#uninstall">8. Uninstallation</a></li>
+        </ul>
+    </div>
+
+    <h2 id="overview">1. Overview</h2>
+
+    <p>The Image Optimization Tool (<code>imgtool</code>) is a production-ready CLI application for batch image processing with enterprise-grade security features.</p>
+
+    <h3>Key Features</h3>
+    <ul>
+        <li><span class="feature-badge">Format Support</span> HEIC, PNG, WebP, TIFF → optimized JPEG</li>
+        <li><span class="feature-badge security-badge">Security</span> Path traversal protection & resource limits</li>
+        <li><span class="feature-badge quality-badge">Quality</span> Smart JPEG handling prevents generation loss</li>
+        <li><span class="feature-badge">Organization</span> Automatic size-based bucketing</li>
+        <li><span class="feature-badge">Audit Trail</span> CSV/JSON reports for compliance</li>
+    </ul>
+
+    <h2 id="requirements">2. System Requirements</h2>
+
+    <h3>Minimum Requirements</h3>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>Requirement</th>
+        </tr>
+        <tr>
+            <td><strong>Operating System</strong></td>
+            <td>Linux, macOS, Windows (with Python support)</td>
+        </tr>
+        <tr>
+            <td><strong>Python Version</strong></td>
+            <td>Python 3.8 or higher</td>
+        </tr>
+        <tr>
+            <td><strong>Disk Space</strong></td>
+            <td>100 MB for dependencies + space for output images</td>
+        </tr>
+        <tr>
+            <td><strong>RAM</strong></td>
+            <td>2 GB minimum (4 GB recommended for large images)</td>
+        </tr>
+    </table>
+
+    <h3>Software Prerequisites</h3>
+    <ul>
+        <li><strong>Python 3.8+</strong> - Download from <a href="https://python.org">python.org</a></li>
+        <li><strong>pip</strong> - Python package installer (included with Python 3.4+)</li>
+        <li><strong>Git</strong> (optional) - For cloning the repository</li>
+    </ul>
+
+    <h2 id="installation">3. Installation Steps</h2>
+
+    <h3>Step 1: Verify Python Installation</h3>
+    <p>Open a terminal/command prompt and run:</p>
+    <pre><code># Check Python version
+python3 --version
+
+# Expected output: Python 3.8.0 or higher</code></pre>
+
+    <div class="warning-box">
+        <strong>⚠️ Windows Users:</strong> Use <code>python</code> instead of <code>python3</code> on Windows.<br>
+        <strong>⚠️ macOS Users:</strong> Ensure you're using Python 3, not the system Python 2.7.
+    </div>
+
+    <h3>Step 2: Download the Tool</h3>
+
+    <h4>Option A: Clone via Git (Recommended)</h4>
+    <pre><code># Clone the repository
+git clone https://github.com/emack001/jmrtradingllc.github.io.git
+
+# Navigate to scripts directory
+cd jmrtradingllc.github.io/scripts</code></pre>
+
+    <h4>Option B: Direct Download</h4>
+    <ol>
+        <li>Download the repository as ZIP from GitHub</li>
+        <li>Extract the archive</li>
+        <li>Navigate to the <code>scripts/</code> folder</li>
+    </ol>
+
+    <h3>Step 3: Install Dependencies</h3>
+
+    <h4>Required Dependencies</h4>
+    <pre><code># Navigate to scripts directory
+cd scripts/
+
+# Install required packages
+pip install -r requirements.txt
+
+# Or install Pillow directly
+pip install "Pillow>=10.0.0"</code></pre>
+
+    <h4>Optional Dependencies</h4>
+
+    <p><strong>For HEIC/HEIF Support</strong> (iPhone/Mac photos):</p>
+    <pre><code>pip install pillow-heif</code></pre>
+
+    <p><strong>For Advanced EXIF Manipulation:</strong></p>
+    <pre><code>pip install piexif</code></pre>
+
+    <div class="info-box">
+        <strong>💡 Complete Installation:</strong> To install all dependencies including optional ones:
+        <pre><code>pip install Pillow pillow-heif piexif</code></pre>
+    </div>
+
+    <h3>Step 4: Make Script Executable (Linux/macOS)</h3>
+    <pre><code># Make the script executable
+chmod +x imgtool.py
+
+# Verify permissions
+ls -l imgtool.py</code></pre>
+
+    <h2 id="verification">4. Installation Verification</h2>
+
+    <h3>Test 1: Display Help Message</h3>
+    <pre><code># Run the help command
+python3 imgtool.py --help</code></pre>
+
+    <p>Expected output should show usage information and available options.</p>
+
+    <h3>Test 2: Check Dependency Support</h3>
+    <pre><code># Test with verbose output
+python3 imgtool.py /nonexistent --dry-run -v 2>&1 | grep -i "support"</code></pre>
+
+    <p>You should see messages about HEIC/HEIF support status.</p>
+
+    <h3>Test 3: Dry-Run Test</h3>
+    <p>Create a test directory with sample images and run:</p>
+    <pre><code># Create test directory
+mkdir -p ~/test-images
+
+# Run dry-run (preview mode)
+python3 imgtool.py ~/test-images --dry-run -v</code></pre>
+
+    <div class="success-box">
+        <strong>✅ Installation Successful!</strong> If all tests pass, the tool is ready to use.
+    </div>
+
+    <h2 id="quick-start">5. Quick Start Guide</h2>
+
+    <h3>Basic Workflow</h3>
+    <ol>
+        <li><strong>Prepare your images</strong> - Place images in a folder (e.g., <code>~/Photos</code>)</li>
+        <li><strong>Run the tool</strong> - Execute with desired options</li>
+        <li><strong>Check output</strong> - Review organized images in buckets</li>
+        <li><strong>Review reports</strong> - Check CSV/JSON for audit trail</li>
+    </ol>
+
+    <h3>Your First Conversion</h3>
+    <pre><code># Convert all images in a folder
+python3 imgtool.py ~/Photos
+
+# Output will be in:
+# ./cleaned/small/    (≤ 200 KB)
+# ./cleaned/medium/   (≤ 600 KB)
+# ./cleaned/large/    (≤ 1500 KB)
+# ./cleaned/xlarge/   (&gt; 1500 KB)</code></pre>
+
+    <h2 id="usage-examples">6. Usage Examples</h2>
+
+    <h3>Example 1: iPhone/Mac Photos (HEIC)</h3>
+    <pre><code>python3 imgtool.py ~/iPhone-Photos \
+  -r \
+  --fix-orientation \
+  --preserve-exif \
+  -o ~/Organized-Photos</code></pre>
+    <p><strong>What this does:</strong></p>
+    <ul>
+        <li><code>-r</code> - Recursively process subfolders</li>
+        <li><code>--fix-orientation</code> - Correct rotated images</li>
+        <li><code>--preserve-exif</code> - Keep camera metadata</li>
+        <li><code>-o</code> - Custom output directory</li>
+    </ul>
+
+    <h3>Example 2: Web Asset Optimization</h3>
+    <pre><code>python3 imgtool.py ./website-images \
+  -r \
+  --max-dim 1920 \
+  -q 90 \
+  --keep-structure</code></pre>
+    <p><strong>What this does:</strong></p>
+    <ul>
+        <li><code>--max-dim 1920</code> - Resize to max 1920px (Full HD)</li>
+        <li><code>-q 90</code> - High quality JPEG (90%)</li>
+        <li><code>--keep-structure</code> - Mirror folder structure</li>
+    </ul>
+
+    <h3>Example 3: Safe Preview (Dry-Run)</h3>
+    <pre><code>python3 imgtool.py ~/important-photos --dry-run -vv</code></pre>
+    <p><strong>What this does:</strong></p>
+    <ul>
+        <li><code>--dry-run</code> - Preview without making changes</li>
+        <li><code>-vv</code> - Maximum verbosity (debug mode)</li>
+    </ul>
+
+    <h3>Example 4: Production Batch with Security Limits</h3>
+    <pre><code>python3 imgtool.py /data/uploads \
+  -r \
+  --max-filesize-mb 50 \
+  --max-pixels 25000000 \
+  -q 85 \
+  --log-file /var/log/imgtool.log \
+  -v</code></pre>
+    <p><strong>What this does:</strong></p>
+    <ul>
+        <li><code>--max-filesize-mb 50</code> - Skip files larger than 50MB</li>
+        <li><code>--max-pixels 25000000</code> - Skip images over ~5000×5000</li>
+        <li><code>--log-file</code> - Save logs to file for auditing</li>
+    </ul>
+
+    <h2 id="troubleshooting">7. Troubleshooting</h2>
+
+    <h3>Issue: "No module named 'PIL'"</h3>
+    <div class="warning-box">
+        <strong>Solution:</strong>
+        <pre><code>pip install Pillow</code></pre>
+        Ensure you're using the correct pip for your Python version.
+    </div>
+
+    <h3>Issue: "HEIC/HEIF support missing"</h3>
+    <div class="warning-box">
+        <strong>Solution:</strong>
+        <pre><code>pip install pillow-heif</code></pre>
+        On some systems, you may also need to install system libraries:<br>
+        <strong>Ubuntu/Debian:</strong> <code>apt-get install libheif-dev</code><br>
+        <strong>macOS:</strong> <code>brew install libheif</code>
+    </div>
+
+    <h3>Issue: "Permission denied" when running script</h3>
+    <div class="warning-box">
+        <strong>Solution (Linux/macOS):</strong>
+        <pre><code>chmod +x imgtool.py
+./imgtool.py --help</code></pre>
+        <strong>Solution (Windows):</strong> Always use <code>python imgtool.py</code> instead of running directly.
+    </div>
+
+    <h3>Issue: Out of Memory</h3>
+    <div class="warning-box">
+        <strong>Solution:</strong> Use resource limits to process smaller batches:
+        <pre><code>python3 imgtool.py ~/images \
+  --max-filesize-mb 50 \
+  --max-pixels 25000000</code></pre>
+    </div>
+
+    <h3>Issue: "Input must be a directory"</h3>
+    <div class="warning-box">
+        <strong>Solution:</strong> Ensure you provide a folder path, not a file:
+        <pre><code># ❌ Wrong
+python3 imgtool.py photo.jpg
+
+# ✅ Correct
+python3 imgtool.py ~/Photos</code></pre>
+    </div>
+
+    <h2 id="uninstall">8. Uninstallation</h2>
+
+    <h3>Remove Python Dependencies</h3>
+    <pre><code># Uninstall packages
+pip uninstall Pillow pillow-heif piexif -y</code></pre>
+
+    <h3>Remove Script Files</h3>
+    <pre><code># Navigate to parent directory
+cd ..
+
+# Remove the scripts directory
+rm -rf scripts/</code></pre>
+
+    <h3>Remove Output Files (Optional)</h3>
+    <pre><code># Remove default output directory
+rm -rf cleaned/
+
+# Remove custom output directories
+rm -rf ~/Organized-Photos/</code></pre>
+
+    <hr style="margin: 40px 0; border: none; border-top: 2px solid #ddd;">
+
+    <h2>📞 Support & Resources</h2>
+
+    <table>
+        <tr>
+            <th>Resource</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td><strong>Documentation</strong></td>
+            <td><code>scripts/README.md</code></td>
+        </tr>
+        <tr>
+            <td><strong>Technical Details</strong></td>
+            <td><code>scripts/ENHANCEMENTS.md</code></td>
+        </tr>
+        <tr>
+            <td><strong>Dependencies</strong></td>
+            <td><code>scripts/requirements.txt</code></td>
+        </tr>
+        <tr>
+            <td><strong>Source Code</strong></td>
+            <td><code>scripts/imgtool.py</code></td>
+        </tr>
+        <tr>
+            <td><strong>GitHub Repository</strong></td>
+            <td><a href="https://github.com/emack001/jmrtradingllc.github.io">emack001/jmrtradingllc.github.io</a></td>
+        </tr>
+    </table>
+
+    <h2>🔐 Security Features (v2.0)</h2>
+
+    <div class="info-box">
+        <h3 style="margin-top: 0;">Enhanced Security Protections</h3>
+        <ul>
+            <li><strong>Path Traversal Protection</strong> - Prevents malicious filenames from escaping output directory</li>
+            <li><strong>Resource Limits</strong> - Configurable max file size (200MB) and resolution (89MP)</li>
+            <li><strong>Quality Preservation</strong> - Skips JPEG re-compression by default to prevent generation loss</li>
+        </ul>
+        <p><em>These features are enabled by default and require no configuration.</em></p>
+    </div>
+
+    <h2>✅ Post-Installation Checklist</h2>
+
+    <ul style="list-style: none; padding-left: 0;">
+        <li>☐ Python 3.8+ installed and verified</li>
+        <li>☐ Pillow package installed successfully</li>
+        <li>☐ Optional dependencies installed (if needed)</li>
+        <li>☐ Script runs with <code>--help</code> flag</li>
+        <li>☐ Dry-run test completed successfully</li>
+        <li>☐ Documentation reviewed</li>
+        <li>☐ Test images processed successfully</li>
+    </ul>
+
+    <div class="success-box" style="margin-top: 30px;">
+        <strong>🎉 You're all set!</strong> The Image Optimization Tool is ready to process your images with enterprise-grade security and quality preservation.
+    </div>
+
+    <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 0.9em;">
+        <p>Image Optimization Tool v2.0 | Installation Guide | January 2026</p>
+        <p>© 2026 JMR Trading LLC | Licensed under MIT</p>
+    </div>
+</body>
+</html>
